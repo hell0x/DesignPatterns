@@ -6,7 +6,12 @@
  * Time: 23:27
  */
 
-class ConcreteObserver2
-{
+require 'Observer.php';
 
+class ConcreteObserver2 implements Observer
+{
+    public function update()
+    {
+        echo 'Observer2';
+    }
 }

@@ -6,7 +6,7 @@
  * Time: 23:07
  */
 
-class Observer
+interface Observer
 {
-
+    public function update();
 }

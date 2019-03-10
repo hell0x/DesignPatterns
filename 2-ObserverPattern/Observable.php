@@ -6,7 +6,13 @@
  * Time: 23:05
  */
 
-class Observable
+interface Observable
 {
+    public function addObserver(Observer $observer);
 
+    public function removeObserver(Observer $observer);
+
+    public function notifyObserver();
+
+    public function setChange();
 }

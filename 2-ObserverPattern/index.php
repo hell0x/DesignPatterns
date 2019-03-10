@@ -6,7 +6,18 @@
  * Time: 23:27
  */
 
-class index
-{
+require 'WeatherData.php';
+require 'ConcreteObserver.php';
+require 'ConcreteObserver2.php';
 
-}
+$observable = new WeatherData();
+
+$observer = new ConcreteObserver();
+$observable->addObserver($observer);
+
+$observable->notifyObserver();
+
+$observer2 = new ConcreteObserver2();
+$observable->addObserver($observer2);
+
+$observable->notifyObserver();
